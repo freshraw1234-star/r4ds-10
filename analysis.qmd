@@ -13,3 +13,12 @@ library(rvest)
 library(httr2)
 library(purrr)
 ```
+
+```{r}
+imdb_snapshots <- as_tibble(readRDS("data/imdb_snapshots.rds"))
+
+imdb_snapshots
+
+imdb_snapshots |>
+  count(snap_year)
+```
